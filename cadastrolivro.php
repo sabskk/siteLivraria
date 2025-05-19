@@ -143,19 +143,19 @@ if(isset($_POST['pesquisar'])){
                 <br><br>
                 Ano: <input type="text" name="ano" id="ano" size="20">
                 <br><br>
-                Código do Autor: <input type="text" name="tamanho" id="tamanho" size="20">
+                Código do Autor: <input type="text" name="codautor" id="codautor" size="20">
                 <br><br>
-                Código da Categoria: <input type="text" name="preco" id="preco" size="20">
+                Código da Categoria: <input type="text" name="codcategoria" id="codcategoria" size="20">
                 <br><br>
-                Código da Editora: <input type="text" name="cod_marca" id="cod_marca" size="20">
+                Código da Editora: <input type="text" name="codeditora" id="codeditora" size="20">
                 <br><br>
-                Resenha: <input type="text" name="cod_categoria" id="cod_categoria" size="20">
+                Resenha: <input type="text" name="resenha" id="resenha" size="20">
                 <br><br>
-                Preço: <input type="text" name="cod_tipo" id="cod_tipo" size="20">
+                Preço: <input type="text" name="preco" id="preco" size="20">
                 <br><br>
-                Imagem 1: <input type="file" name="foto1" id="foto1" size="20">
+                Imagem 1: <input type="file" name="fotocapa1" id="fotocapa1" size="20">
                 <br><br>
-                Imagem 2: <input type="file" name="foto2" id="foto2" size="20">
+                Imagem 2: <input type="file" name="fotocapa2" id="fotocapa2" size="20">
                 <br><br>
                 <input type="submit" name="enviar" id="enviar" value="Enviar"> 
                 <input type="submit" name="alterar" id="alterar" value="Alterar"> 
