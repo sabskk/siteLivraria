@@ -1,0 +1,124 @@
+<?php
+
+// fazer conexão com o banco
+$conectar = mysql_connect("localhost","root","");
+$banco = mysql_select_db("livraria");
+
+// if para a opção dos botões
+if(isset($_POST['enviar'])){
+
+    // capturar as variáveis inseridas no HTML
+    $nome = $_POST['nome'];
+    $pais = $_POST['pais'];
+
+    // mandar executar comando SQL
+    $sql = mysql_query("insert into autor(nome, pais) values('$nome', '$pais')");
+
+    // analisar resultado
+    if (mysql_affected_rows() > 0) {
+        echo "<script>alert('Cadastro atualizado com sucesso!'); window.location='cadastroautor.php';</script>";
+    }
+    else {
+        echo "<script>alert('Não foi possível atualizar o cadastro: " . mysql_error() . "'); window.location='cadastroautor.php';</script>";
+    }
+}
+
+if(isset($_POST['alterar'])){
+    $codigo = $_POST['codigo'];
+    $nome = $_POST['nome'];
+    $pais = $_POST['pais'];
+
+    $sql = mysql_query("update autor set nome = '$nome' where codigo = '$codigo'");
+
+    if (mysql_affected_rows() > 0) {
+        echo "<script>alert('Dados alterados com sucesso!'); window.location='cadastroautor.php';</script>";
+    }
+    else {
+        echo "<script>alert('Não foi possível atualizar o cadastro: " . mysql_error() . "'); window.location='cadastroautor.php';</script>";
+    }
+}
+
+if(isset($_POST['excluir'])){
+    $codigo = $_POST['codigo'];
+    $nome = $_POST['nome'];
+    $pais = $_POST['pais'];
+
+    $sql = mysql_query("delete * from autor where codigo = '$codigo'");
+
+    if (mysql_affected_rows() > 0) {
+        echo "<script>alert('Cadastro excluído com sucesso!'); window.location='cadastroautor.php';</script>";
+    }
+    else {
+        echo "<script>alert('Não foi possível excluir o cadastro: " . mysql_error() . "'); window.location='cadastroautor.php';</script>";
+    }
+}
+
+if(isset($_POST['pesquisar'])){
+    $codigo = $_POST['codigo'];
+
+    $sql = "select * from autor where codigo = '$codigo'";
+
+    $resultado = mysql_query($sql);
+
+    if (mysql_affected_rows() > 0){
+        echo "<script>alert('Não foi possível encontrar o cadastro: " . mysql_error() . "'); window.location='cadastrotipo.php';</script>";
+    }
+    else{
+        echo "<b>"."Pesquisa de Autor: "."</b><br>";
+        
+        while ($dados = mysql_fetch_array($resultado)){
+                echo "Código: ".$dados['codigo']."<br>"."Nome: ".$dados['nome']."<br>";
+            }
+    }
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Cadastrar Autor </title>
+    <link rel="shortcut icon" href="icone.ico" /> 
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="pesquisa.php" id="logo"><img src="Logo.png" height=95></a>
+        <a href="login.php" id="logologin"><img src="https://img.icons8.com/?size=100&id=23400&format=png&color=FFFFFF" height=45></a>
+
+    </header>
+    
+    <div class="mainarea">
+
+        <div id="menublock">
+
+            <form name="formulario" method="post" action="cadastroautor.php">
+
+                <h2> Cadastrar Autor </h2>
+                Código: <input type="text" name="codigo" id="codigo" size="20">
+                <br><br>
+                Nome: <input type="text" name="nome" id="nome" size="20">
+                <br><br>
+                País: <input type="text" name="pais" id="pais" size="20">
+                <br><br>
+                <input type="submit" name="enviar" id="enviar" value="Enviar"> 
+                <input type="submit" name="alterar" id="alterar" value="Alterar"> 
+                <input type="submit" name="excluir" id="excluir" value="Excluir"> 
+                <input type="submit" name="pesquisar" id="pesquisar" value="Pesquisar"> 
+        
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h3{
+    text-align: center;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    background-color: #dcdcfd;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+
+#logo{
+    margin-right: 900px;
+}
+/**/
+
+/* BARRA DE PESQUISA LATERAL */
+#barrapesquisa{
+    display: flex;
+    background-color: rgb(230 230 230);
+    margin: 20px;
+    margin-right: 0px;
+    border-radius: 15px;
+}
+
+#formpesquisa{
+    margin: 20px;
+    width: 15vw;
+}
+
+label{
+    display: block;
+}
+/**/
+
+/* CADASTRO DE ITENS */
+.mainarea {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menublock {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    width: fit-content;
+    padding: 15px 30px 15px 30px;
+    border-radius: 15px;
+    margin: 55px;
+}
+
+#menublock a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+#enviar {
+    background-color: #a4a4f7;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+#alterar {
+    background-color: #a4a4f7;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+#excluir {
+    background-color: #a4a4f7;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+#pesquisar {
+    background-color: #a4a4f7;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+input[type=text]{
+    background-color: white;
+    color: black;
+}
+
+input[type=password]{
+    background-color: white;
+    color: black;
+}
+
+input[type=file]{
+    background-color: white;
+    color: black;
+}
+/**/
+
+input{
+    background-color: #a4a4f7;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+select{
+    background-color: white;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+#homepage{
+    display: flex;
+}
+
+#prodgrid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(230 230 230);
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#divresult{
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    width: 15vw;
+}
+
+#divprods{
+    display: grid;
+    width: 15vw;
+}
+
+#divprods p{
+    text-align: center;
+    margin: 5px 0px 10px 0px;
+}
+
+#divprods button{
+    align-self: center;
+}
+
+#imgprods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgprods img{
+    margin: 10px 0px 10px 0px;
+    max-width: 15vw;
+}
+
+.box{
+    background-color: #a4a4f7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.buy {
+    background-color: #a4a4f7;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span{
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    background-color: #a4a4f7;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 0px;
+    text-align: center;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
